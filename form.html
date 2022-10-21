@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: DINNextW1G,arial,georgia,sans-serif;;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form{
+            background-color: rgb(250, 248, 248);
+            border-radius: 1px;
+            width: 500px;
+            height: auto;
+            ox-shadow: 1px 1px 1px black;
+            padding: 8px;
+            text-align: center;
+            margin: 10% 0;
+            position: relative;
+            border: none;
+        }
+        form::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0%;
+            background-color: rgb(158, 42, 42);
+        }
+        form h1{
+            text-align: center;
+            position: relative;
+        }
+        .form-group{
+            margin: 30px 0;
+            position: relative;
+            
+        }
+        .form-group input{
+            font-size: 14px;
+            padding: 8px 10px;
+            background-color: transparent;
+            border-radius: 5px;
+            border: 2px solid gray;
+            color: black;
+            width: 80%;
+            position: relative;
+            overflow: hidden;
+        }
+        .form-group input::placeholder{
+            color: transparent;
+        }
+        .form-group .form-label{
+            position: absolute;
+            top: 8px;
+            left: 50px;
+            color: gray;
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+        .form-group input:focus + .form-label,
+        .form-group input:not(:placeholder-shown)+ .form-label{
+            transform: translate(-10px, -30px);
+            height:30%;
+            padding: 5px;
+            background-color: transparent;
+            color: black;
+            font-size: 14px;
+        }
+        .form-group input:focus{
+            background-color: rgb(199, 93, 86);
+            top:0;
+            bottom:0;
+            left: 0;
+            width:80%;
+            transition: all 0.7s ease;
+            
+        }
+        .form-group button{
+            height: auto;
+            width: auto;
+            background-color: rgb(199, 62, 53);
+            border-radius: 0px;
+            color: white;
+            border:none;
+            padding: 10px 70px;
+            position: relative;
+            outline: solid 2px black;
+            overflow: hidden;
+        }
+        .form-group button::before{
+            content: '';
+            position: absolute;
+            top:0;
+            bottom:0;
+            left: -10px;
+            width:0%;
+            background-color: rgb(249, 249, 252);
+            transition: all 0.4s ease-in-out;
+            -webkit-transform: skew(-30deg);
+            -moz-transform: skew(-30deg);
+            -o-transform: skew(-30deg);
+            transform: skew(-30deg);
+        }
+        .form-group button:hover::before{
+            width: 110%;
+        }
+        .form-group button p{
+            position: relative;
+            color:black;
+        }
+        hr{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="form">
+            <form action="">
+                <h1>IDENTITAS DIRI</h1>
+                <br>
+                <hr>
+                <div class="form-group">
+                    <input type="text" placeholder="Nama Lengkap">
+                    <label class="form-label">Nama Lengkap</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="NIM">
+                    <label class="form-label">NIM</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Tanggal Lahir">
+                    <label class="form-label">Umur</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Tempat Lahir">
+                    <label class="form-label">Tempat Lahir</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Tanggal Lahir">
+                    <label class="form-label">Tanggal Lahir</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email">
+                    <label class="form-label">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password">
+                    <label class="form-label">Password</label>
+                </div>
+                <div class="form-group">
+                    <center><button type="submit"><p>SUBMIT</p></button></center>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
